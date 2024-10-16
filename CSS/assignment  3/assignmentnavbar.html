@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            navbar
+        </title>
+        <style>
+            * {
+                margin: 20px,20px,0,0;
+                padding: 20px,20px,0,0;
+            }
+
+            #navbar{
+                display: flex;
+                flex-direction : row;
+                background-color: rgb(241, 234, 234);
+                justify-content: space-around;
+                border: 5px;
+                border-color: rgb(82, 17, 17);
+                align-items: center;
+            }
+
+            #navbar :nth-child(1){
+                width: 200px;
+            }
+
+            #navbar div{
+                color: black;
+
+               
+
+            }
+            #navbar div :nth-child(7){
+                color: blue;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            #navbar div a{
+                margin-left: 10px;
+                margin-right: 10px;
+
+            }
+
+            #navbar div button{
+                border-radius: 5px;
+                border-color: teal;
+                background-color: pink;
+            }
+            #navbar div button:hover{
+                background-color: palevioletred;
+            }
+
+            #inside select{
+                width: auto;
+                border: 0px;
+                background-color: rgb(241, 234, 234);
+            }
+
+
+           
+
+        </style>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+           
+            <div><h1>masai</h1></div>
+            <div id="inside">
+
+                <select name="Course">
+                    <option><p>Course</p></option>
+                    <option><p>full Stack</p></option>
+                    <option> <p>Data analyst</p></option>
+                </select>
+                <a>Fees and ISA</a>
+                <a>About us</a>
+                <a>Hire From Us</a>
+                <a>FAQ</a>
+                <a>Events</a>
+                <a>refer & earn</a>
+                <button type="submit">Login</button>
+            </div>
+           
+        </nav>
+
+    </body>
+</html>
