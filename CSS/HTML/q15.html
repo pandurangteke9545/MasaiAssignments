@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        
+        text-align: center;
+    }
+    header{
+        position: sticky;
+        top: 0px;
+        background-color: pink;
+        height: 150px;
+        z-index: 100;
+        margin: 20px;
+    }
+    nav{
+
+        background : linear-gradient(rgb(13, 18, 80) , rgb(187, 187, 165));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+        top: 20px;
+       color: white;
+    }
+    nav div:nth-child(1) h1{
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+    }
+    nav div:nth-child(2) ul{
+        display: flex;
+        /* flex-direction:row; */
+        justify-content: center;
+    }
+
+    nav div:nth-child(2) ul li{
+        margin: 0px 50px;
+        list-style: none;
+        font-size: 20px;
+
+    }
+
+     nav div:nth-child(2) ul a{
+        text-decoration: none;
+        color:white;
+    }
+
+     nav ul li a:hover {
+      background-color: white;
+      color: rgb(13, 18, 80);
+      border-radius: 5px;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    button{
+        background-color: blue;
+        color: black;
+        height: 50px;
+        width: 80px;
+        border-radius: 10px;
+
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    button:hover{
+        color: white;
+        background-color: black;
+    }
+     table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+   form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>My Portfolio</h1>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to My Portfolio</h1>
+        <p>This portfolio showcases my projects and provides informaation aout my background and contact details</p>
+        
+       <section id="about">
+            <h1>About</h1>
+           <p>Hello i'm a web devloper passionate about building dynamic and responsive websites. I enjoy createing user friendly interfaces and working on challaging projects.</p>
+       </section>
+       <section id="project">
+        <h1>Project</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Descrption</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Project Alpha</td>
+                    <td>A web-based tool for traccking project progress and manaing tasks</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>Portfolio Site</td>
+                    <td>A personal website showcsing my work and skills as a web developer</td>
+                    <td>2024</td>
+                </tr>
+            
+            </tbody>
+        </table>
+       </section>
+       <section id="contact">
+            <h1>Contact Us</h1>
+            <form action="submit">
+
+                <div>
+                    <input type="name" placeholder="Enter your name" size="20">
+                </div>
+                <div>
+                    <input type="email" placeholder="enter your email" size="20">
+                </div>
+                <div>
+                    <input type="number" placeholder="enter your mobile number" minlength="10"  maxlength="10" size="15">
+                </div>
+                <div>
+                    <textarea name="message" id="message" placeholder="Enter message"></textarea>
+                </div>
+                <button type="submit">submit</button>
+            </form>
+       </section>
+
+ </main>
+    
+</body>
+</html>
