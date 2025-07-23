@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display properties</title>
+</head>
+
+<style>
+
+      #displayProp div:nth-child(1){
+        display: block;
+        color: red;
+        height: 100px;
+        width: 100px;
+        background-color: black;
+
+      }
+      #displayProp div:nth-child(2){
+        display: inline;
+        color: blue;
+         height: 100px;
+        width: 100px;
+        background-color: PINK;
+
+      }
+      #displayProp div:nth-child(3){
+        display: inline-block;
+        color: yellow;
+         height: 100px;
+        width: 100px;
+        background-color: blue;
+
+      }
+      #displayProp div:nth-child(4){
+        display: none;
+        color: green;
+         height: 100px;
+        width: 100px;
+        background-color: black;
+
+      }
+
+</style>
+  
+
+<body>
+
+        <div id="displayProp">
+            <div>First Block-Element</div>
+            <div>second inline-element</div>
+            <div>Third inline-block element</div>
+            <div id="hiddenblock">Fourth hidden-element</div>
+            
+        </div>
+        <button onclick="seeHidden()" id="btn">Click to see hidden element</button>
+        <button onclick="hideElement()" id="btn1">Hide elemrnt</button>
+</body>
+</html>
+
+<script>
+
+    function seeHidden(){
+        console.log("Clicked")
+        const buttonid = document.getElementById("hiddenblock");
+        buttonid.style.display = 'inline-block';
+    }
+
+    function hideElement(){
+        const buttonid = document.getElementById("hiddenblock");
+        buttonid.style.display = 'none';
+
+    }
+
+    // const button = Document.getElementById("btn",addEventListener(()=>{
+
+    // }))
+
+
+
+
+</script>
