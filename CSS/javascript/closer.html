@@ -117,18 +117,20 @@ bank.getbalance()
 
 
 //Q14
-
 function createFunctionList() {
-let functions = [];
+  let functions = [];
 
-for (var i = 0; i < 5; i++) {
-functions.push(function () {
-console.log("Index:", i);
-});
+  for (var i = 0; i < 5; i++) {
+    (function(index) {
+      functions.push(function () {
+        console.log("Index:", index);
+      });
+    })(i);
+  }
+
+  return functions;
 }
 
-return functions; }
-const functionList = createFunctionList();
 
 functionList[0]();    
 functionList[1]();   
