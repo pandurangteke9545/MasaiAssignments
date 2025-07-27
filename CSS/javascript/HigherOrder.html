@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+<body>
+
+    <h1>Higher Order Function</h1>
+    
+</body>
+</html>
+
+<script>
+
+    const sum = [1, 2, 3].reduce((acc, val) => acc + val,0);
+    console.log(sum);
+
+    const evenNumbers = [1, 2, 3, 4].filter(function(num) {
+       return num % 2 === 0;
+        });
+    console.log(evenNumbers);
+
+
+    // @11 
+
+    const products = [
+  { name: "Laptop Bag", price: 45 },
+  { name: "Bluetooth Speaker", price: 65 },
+  { name: "USB Cable", price: 10 },
+  { name: "Wireless Mouse", price: 55 }
+];
+
+function processProducts(products){
+
+    let productnames = products.map((prod,index)=>{return prod.name})
+
+    products.forEach((element) => {
+
+       if(element.price>50){
+         console.log(`${element.name} is above $50`)
+       }
+       else{
+
+         console.log(`${element.name} is below $50`)
+
+       }
+
+    });
+
+    // console.log(productnames)
+    return productnames;
+
+}
+
+console.log(processProducts(products))
+
+//Q12
+
+  let students =[{ "name": "Alice", "marks": 58 },
+  { "name": "Bob", "marks": 85 },
+  { "name": "Charlie", "marks": 92 },
+  { "name": "David", "marks": 45 },
+  { "name": "Emma", "marks": 76 },
+  { "name": "Frank", "marks": 63 },
+  { "name": "Grace", "marks": 89 },
+  { "name": "Hannah", "marks": 95 },
+  { "name": "Ian", "marks": 54 },
+  { "name": "Jack", "marks": 79 },
+  { "name": "Kate", "marks": 67 },
+  { "name": "Leo", "marks": 88 },
+  { "name": "Mia", "marks": 91 },
+  { "name": "Nathan", "marks": 72 },
+  { "name": "Olivia", "marks": 82 }
+]
+
+    function processStudents(students){
+        
+        let goodstudents = students.filter((stud)=>{return stud.marks >60});
+        console.log(goodstudents)
+        
+        let sortStudents = students.sort((a, b) => {return a.marks - b.marks});
+        console.log(sortStudents)
+        
+        let nameofstudents = sortStudents.map((stud)=>(stud.name))
+        
+    return nameofstudents;
+    
+} 
+
+  console.log(processStudents(students))
+
+  //Q13
+    
+   let electronic = ["electronics", "clothing", "electronics", "toys", "clothing", "toys", "toys"]
+
+
+        let grouped = electronic.reduce((acc, item) => {
+            acc[item] = (acc[item] || 0) + 1;
+            return acc;
+            }, {});
+        console.log(grouped);
+
+    //Q14
+
+
+    let employee = [
+
+        { name: "Alice", tasksCompleted: 8, rating: 4.7 },
+
+        { name: "Bob", tasksCompleted: 4, rating: 4.0 },
+
+        { name: "Charlie", tasksCompleted: 6, rating: 3.5 },
+
+        { name: "David", tasksCompleted: 10, rating: 4.9 },
+
+        { name: "Eve", tasksCompleted: 7, rating: 2.8 }
+
+    ]
+
+    function employeeperformance(employee){
+
+        let filterdemployee = employee.filter((emp)=>(emp.tasksCompleted > 5))
+
+        console.log(filterdemployee)
+
+        let performemp = filterdemployee.map((emp)=>{
+            let performance = ""
+                if(emp.rating > 4.5){
+                    performance = "Exellent"
+                }else if(emp.rating >=3){
+                    performance = "Good"
+                }else{
+                    performance = "Need Improvement"
+                }
+                
+                return ({name : emp.name ,performance})
+        })
+
+        return performemp
+    }
+
+    console.log(employeeperformance(employee))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</script>
