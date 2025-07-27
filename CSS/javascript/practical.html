@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        JavaScript Practical
+    </h1>
+    
+</body>
+</html>
+<script>
+
+// variabel
+
+
+
+let username = "raj"
+
+
+function displayname(){
+    let username = "Raj";
+    console.log("Welcome",username)
+}
+
+// let userdisplay = function (username){
+//      console.log("after",username)
+
+// }
+
+let userdisplay = (username)=>{
+     console.log("after",username)
+}
+
+
+
+// var num = parseInt(prompt("Enter a number:"));
+var num = -10
+num>0?console.log("Positive num!<br>"):console.log("Negative num!<br>");
+
+// if(num>0){
+//     console.log("Positive num!<br>");
+// }
+// else if(num<=0){
+//     console.log("Negative num!<br>");
+// }
+// else{
+//    console.log("Invalid Input!<br>");
+// }
+
+displayname()
+userdisplay(username)
+
+
+
+function add(a,b){
+
+    console.log(`addition of ${a} , ${b} is ${a+b}`)
+
+    return a+b
+}
+
+let ans = add(10,20)
+
+let addition = (a,b)=>{
+    return a+b
+}
+
+let user = {
+    name : {firstName:"Mrunal" , lastname :"Khedekar"},
+    age : 56,
+    gender : "male",
+    avalability : true
+}
+
+let newUser = {...user,name:"Mrunal"}
+
+console.log(user.name.lastname)
+function displayUser(){
+    console.log("This is my new usser",username)
+}
+
+displayUser()
+
+console.log("New user info",newUser)
+console.log("old user info",user)
+
+
+
+let arr = ["raj",79,true,"vijay"]
+
+for(let i = 0 ; i<arr.length ; i++ ){
+    console.log(arr[i])
+}
+
+
+
+
+console.log("First")
+
+function timmer(){
+
+    setTimeout(()=>{
+        console.log("Second")
+    },2000)
+}
+console.log("third")
+
+let arrforeach = [10,20,30,40,50]
+
+
+arrforeach.forEach(())
+
+// forEach,
+// map,
+// filter,
+// reduse
+
+//setTimeout
+
+timmer()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+</script>
