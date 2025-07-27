@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Closer</h1>
+</body>
+
+
+</html>
+
+<script>
+
+    
+    // function counter() {
+    //     let count=0;
+        
+    //     return function() {
+    //         console.log(count++);
+    //     }
+    // }
+    
+    // const c=counter();
+    // c();
+    // c();
+    // console.log(count);
+
+
+
+//     let counter = (function () {
+//     let count = 0;
+//     return function () {
+//         count++;
+//         console.log(count);
+//     };
+//     })();
+// counter();
+// counter();
+// counter();
+
+
+/////Q11 closure
+
+function outerFunction(){
+    let message = "Hello Shree"
+
+    return function innerFunction(){
+        console.log(message);
+        
+    }
+}
+
+const fun = outerFunction()
+fun()
+
+
+///Q12
+
+function counter(){
+    let count = 0;
+
+    function increment(){
+        count++;
+        // console.log(count)
+    }
+
+    function displayCount(){
+        console.log(count);
+    }
+
+    return {increment,displayCount}
+}
+
+const counte = counter()
+counte.increment()
+counte.displayCount()
+counte.increment()
+
+
+// Q13
+
+function bankAccount(){
+    let balance = 0;
+
+    function deposite(amount){
+        balance += amount
+    }
+
+    function withdraw(amount){
+        if(amount > balance ){
+            console.log("You dont have sufficient amount in your account")
+        }
+        else{
+            balance -= amount
+        }
+    }
+
+    function getbalance(){
+        console.log("You have a balance of ruppe",balance)
+    }
+
+    return {deposite,withdraw,getbalance}
+}
+
+const bank = bankAccount()
+bank.getbalance()
+bank.deposite(300)
+bank.getbalance()
+bank.withdraw(500)
+bank.withdraw(200)
+bank.getbalance()
+
+
+//Q14
+
+function createFunctionList() {
+let functions = [];
+
+for (var i = 0; i < 5; i++) {
+functions.push(function () {
+console.log("Index:", i);
+});
+}
+
+return functions; }
+const functionList = createFunctionList();
+
+functionList[0]();    
+functionList[1]();   
+functionList[2]();   
+functionList[3]();  
+functionList[4]();   
+
+    
+</script>
