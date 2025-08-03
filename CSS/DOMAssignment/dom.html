@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 id="box"></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel vitae assumenda minus aperiam voluptatibus quisquam mollitia natus numquam porro aspernatur sint ratione praesentium fugit temporibus quo ipsa, dolores eius architecto.</p>
+
+    <div></div>
+    
+</body>
+</html>
+
+<script>
+    let box =document.getElementById('box')
+    box.innerText = 'Welcome to the DOM World!'
+
+    let eletag = document.getElementsByTagName('p');
+    for (let i = 0; i < eletag.length; i++) {
+        eletag[i].style.color = 'blue';
+    }
+
+    let div = document.querySelector('div.container');
+    div.style.backgroundColor = 'yellow';
+
+</script>

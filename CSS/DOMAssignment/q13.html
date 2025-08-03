@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Div Updater</title>
+  <style>
+    #target-div {
+      width: 300px;
+      height: 150px;
+      background-color: lightgray;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    input {
+      margin: 5px 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Change Div Properties</h2>
+
+  <input type="text" id="color-input" placeholder="Enter color name (e.g., red)">
+  <input type="text" id="text-input" placeholder="Enter new text">
+
+
+  <button id="bg-btn">Change Background</button>
+  <button id="text-btn">Update Text</button>
+
+
+  <div id="target-div">This is the default content.</div>
+
+  <script>
+    const colorInput = document.querySelector('#color-input');
+    const textInput = document.querySelector('#text-input');
+    const bgButton = document.querySelector('#bg-btn');
+    const textButton = document.querySelector('#text-btn');
+    const targetDiv = document.querySelector('#target-div');
+
+  
+    function isValidColor(color) {
+      const s = new Option().style;
+      s.color = color;
+      return s.color !== '';
+    }
+
+    bgButton.addEventListener('click', () => {
+      const color = colorInput.value.trim();
+      if (isValidColor(color)) {
+        targetDiv.style.backgroundColor = color;
+      } else {
+        alert('Invalid color name!');
+      }
+    });
+
+    textButton.addEventListener('click', () => {
+      const text = textInput.value.trim();
+      if (text === '') {
+        alert('Please enter some text!');
+      } else {
+        targetDiv.textContent = text;
+      }
+    });
+  </script>
+
+</body>
+</html>
