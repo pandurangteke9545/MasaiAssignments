@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Async Await promises</h1>
+    
+</body>
+</html>
+
+<script>
+
+
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject("An error occurred");
+//   }, 1000);
+// });
+
+// promise.then((result) => {
+//   console.log(result);
+// }).catch((errr)=>{
+//     console.log("error:",errr)
+// })
+
+// // console.log("Raj")
+
+// // let data = "raj"
+
+// function fetchData(callback) {
+//   setTimeout(() => {
+//     let data = "Server data";
+//     callback();
+//   }, 1000);
+// }
+
+// fetchData((data) => console.log("This is the",data));
+
+// console.log("Start");
+
+// setTimeout(() => {
+//   console.log("Task completed");
+// }, 1000);
+
+// console.log("End");
+
+
+let promise = new Promise((resolve) => {
+  resolve("Success!");
+});
+
+promise
+  .then((result) => {
+    console.log(result);
+    return result;
+  })
+  .then((result) => {
+    console.log(result + " Again");
+  });
+
+//   Q6 
+
+function timer(duration,onComplete){
+    setTimeout(()=>{
+       onComplete(`Timer of ${duration} as finished`)
+    },duration)
+
+}
+
+
+timer(10000,(message)=>{
+    console.log(message)
+})
+
+
+// Q7
+
+// async function fetchdata(){
+
+//     let responce = await ('https://jsonplaceholder.typicode.com/users')
+//     let newdata = await responce.json()
+//     newdata.map((user,index)=>{
+//         console.log(user.name)
+//     })
+//     console.log(newdata)
+// }
+
+// fetchdata()
+
+
+// Q8
+
+async function fetchdata(){
+
+    try {
+
+         let responce = await fetch('https://fakestoreapi.com/products')
+         let newdata = await responce.json()
+         let totalPrice =newdata.reduce((acc,newdata)=>{
+      
+          return acc+newdata.price
+
+    },0)
+
+    console.log(totalPrice)
+        
+    } catch (error) {
+        console.log("error",error)
+    }
+   
+}
+
+fetchdata()
+
+
+
+
+</script>
