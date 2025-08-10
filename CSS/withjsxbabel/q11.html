@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root">
+         <h1>From Dom</h1>
+    </div>
+   
+</body>
+</html>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- 1)add cdn links -->
+<script type="text/babel">
+    // <script>
+
+//     function Navbar(){
+//         return(
+//         <>
+//         <h1>This is Navbar</h1>
+//         const button = <button onClick={() => alert("Clicked!")}>Click Me</button>;
+
+//         </>
+
+//         )
+//     }
+
+//     function App(){
+//         return(<>
+//         <Navbar/>
+//         <h1>I am App Component</h1>
+//         <>
+//   <p>First</p><p>Second</p>
+// </>
+
+//         </>)
+//     }
+
+//     const items = [];
+//     const element = <p>{items.length ? "Items available" : "No items found"}</p>;
+//     ReactDOM.createRoot(document.getElementById("root")).render(element);
+
+//     const list = ["Apple", "Banana", "Cherry"];
+// const element = (
+//   <ul>
+//     {list.map(item => (
+//       <li>{item}</li>
+//     ))}
+//   </ul>
+// );
+// ReactDOM.createRoot(document.getElementById("root")).render(element);
+
+
+    // const userName = "John";
+    // const element = <h1>Hello, {userName}!</h1>;
+    // ReactDOM.createRoot(document.getElementById("root")).render(element);
+
+    let para = document.createElement('p')
+    para.innerText = "Hello, World!"
+    document.body.appendChild(para)
+
+
+
+    let root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <p>Hello, World!</p>
+    )
+
+</script>
